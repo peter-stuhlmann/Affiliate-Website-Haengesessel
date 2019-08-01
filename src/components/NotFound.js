@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Wrapper, Main, Sidebar } from './StyledComponents';
+import { TextWidget, ImageWidget } from './SidebarWidgets';
 
 export default class HeaderComponent extends Component {
 
@@ -13,7 +14,8 @@ export default class HeaderComponent extends Component {
             <Link to="/">Home</Link>
           </Main>
           <Sidebar>
-              
+              <TextWidget />
+              <ImageWidget />
           </Sidebar>
         </Wrapper>
       );

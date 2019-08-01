@@ -101,7 +101,11 @@ const StyledSidebar = styled.p`
   padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2)
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
+
+  img {
+      max-width: 100%
+  }
 `;
 export const Sidebar = (props) => <StyledSidebar {...props} />
 

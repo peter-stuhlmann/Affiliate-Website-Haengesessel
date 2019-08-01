@@ -19,7 +19,7 @@ export const Header = (props) => <StyledHeader {...props} />
 
 const StyledLogo = styled.div`
   line-height: 1.2;
-  margin: 40px 15px;
+  margin: 40px 0;
   text-shadow: 2px 2px 2px #000;
   text-align: left;
 
@@ -30,7 +30,7 @@ const StyledLogo = styled.div`
   .site-title {
     font-size: 3em;
     letter-spacing: inherit;
-    font-family: 'Verdana',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     margin: 0;
     display: inline-block;
@@ -43,10 +43,46 @@ const StyledLogo = styled.div`
     color: #fff;
     font-size: 1.3em;
     margin: 10px 0 0;
-    font-family: 'Viga',sans-serif
+    font-family: 'Open Sans', sans-serif
   }
 `;
 export const Logo = (props) => <StyledLogo {...props} />
+
+const StyledMainNavigation = styled.div`
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: inline-block;
+  width: 100%;
+  background-color: #9C4808;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.6);
+  font-family: 'Open Sans', sans-serif;
+
+  nav {
+    display: inline-block;
+    vertical-align: middle;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 25px;
+
+        a {
+          text-decoration: none;
+          transition: .3s ease all;
+          color: #fff
+        }
+      }
+    }
+  }
+`;
+export const MainNavigation = (props) => <StyledMainNavigation {...props} />
 
 const StyledFooter = styled.footer`
   background-color: #9C4808;
@@ -59,7 +95,6 @@ export const Footer = (props) => <StyledFooter {...props} />
 
 const StyledFooterNav = styled.nav`
   display: inline-block;
-  margin: 0 20px;
   text-align: center;
   float: right;
         
@@ -89,7 +124,6 @@ export const FooterNav = (props) => <StyledFooterNav {...props} />
 
 const StyledCopyright = styled.p`
   margin: 0;
-  padding: 0 15px;
   display: inline-block;
 
   a {

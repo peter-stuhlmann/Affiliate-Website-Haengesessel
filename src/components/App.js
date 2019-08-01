@@ -1,8 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import '../assets/scss/main.scss';
 import HeaderComponent from './Header';
 import MainNavigation from './MainNavigation';
+import NotFound from './NotFound';
 import FooterComponent from './Footer';
 
 export default class App extends Component {
@@ -14,7 +15,9 @@ export default class App extends Component {
         <HeaderComponent />
         <MainNavigation />
 
-        Hello World!
+        <Switch>
+          <Route component={ NotFound } />
+        </Switch>
         
         <FooterComponent />
       

@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap row;
   padding: 25px 15px;
   width: 100%;
   max-width: 1170px;
@@ -83,6 +86,24 @@ const StyledMainNavigation = styled.div`
   }
 `;
 export const MainNavigation = (props) => <StyledMainNavigation {...props} />
+
+const StyledMain = styled.p`
+  flex: 0 0 74%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2)
+`;
+export const Main = (props) => <StyledMain {...props} />
+
+const StyledSidebar = styled.p`
+  flex: 0 0 25%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2)
+`;
+export const Sidebar = (props) => <StyledSidebar {...props} />
 
 const StyledFooter = styled.footer`
   background-color: #9C4808;

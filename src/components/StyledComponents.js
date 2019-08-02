@@ -5,7 +5,6 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: wrap row;
-  padding: 25px 15px;
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
@@ -23,6 +22,7 @@ export const Header = (props) => <StyledHeader {...props} />
 const StyledLogo = styled.div`
   line-height: 1.2;
   margin: 40px 0;
+  padding: 15px;
   text-shadow: 2px 2px 2px #000;
   text-align: left;
 
@@ -66,6 +66,7 @@ const StyledMainNavigation = styled.div`
   nav {
     display: inline-block;
     vertical-align: middle;
+    padding: 15px;
 
     ul {
       margin: 0;
@@ -79,7 +80,11 @@ const StyledMainNavigation = styled.div`
         a {
           text-decoration: none;
           transition: .3s ease all;
-          color: #fff
+          color: #fff;
+
+          &:hover {
+              opacity: 0.8
+          }
         }
       }
     }
@@ -90,6 +95,7 @@ export const MainNavigation = (props) => <StyledMainNavigation {...props} />
 const StyledMain = styled.section`
   flex: 0 0 74%;
   padding: 15px;
+  margin-top: 30px;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
@@ -104,6 +110,7 @@ export const Main = (props) => <StyledMain {...props} />
 const StyledSidebar = styled.aside`
   flex: 0 0 25%;
   padding: 15px;
+  margin-top: 30px;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
@@ -132,6 +139,7 @@ const StyledFooterNav = styled.nav`
   display: inline-block;
   text-align: center;
   float: right;
+  padding: 15px;
         
   ul {
     margin: 0;
@@ -160,6 +168,7 @@ export const FooterNav = (props) => <StyledFooterNav {...props} />
 const StyledCopyright = styled.p`
   margin: 0;
   display: inline-block;
+  padding: 15px;
 
   a {
     color: #fff;

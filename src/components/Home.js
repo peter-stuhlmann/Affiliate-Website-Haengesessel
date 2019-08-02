@@ -4,6 +4,14 @@ import { TextWidget, ImageWidget } from './SidebarWidgets';
 
 export default class HomeComponent extends Component {
 
+    metadata() {
+      document.title = "Home"
+    }
+
+    componentDidMount() {
+      this.metadata()
+    }
+
     render() {
       return (
         <Wrapper>

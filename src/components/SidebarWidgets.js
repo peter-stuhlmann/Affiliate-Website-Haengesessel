@@ -16,7 +16,7 @@ export class ImageWidget extends Component {
 
     render() {
       return (
-        <img src="http://via.placeholder.com/250x150" alt="Lorem ipsum" />
+        <img src="https://via.placeholder.com/250x150" alt="Lorem ipsum" />
       );
     }
 

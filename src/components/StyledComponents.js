@@ -87,21 +87,31 @@ const StyledMainNavigation = styled.div`
 `;
 export const MainNavigation = (props) => <StyledMainNavigation {...props} />
 
-const StyledMain = styled.p`
+const StyledMain = styled.section`
   flex: 0 0 74%;
   padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2)
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
+
+  p {
+      line-height: 1.6;
+      text-align: justify
+  }
 `;
 export const Main = (props) => <StyledMain {...props} />
 
-const StyledSidebar = styled.p`
+const StyledSidebar = styled.aside`
   flex: 0 0 25%;
   padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
+
+  p {
+    line-height: 1.6;
+    text-align: justify
+  }
 
   img {
       max-width: 100%
@@ -124,7 +134,7 @@ const StyledFooterNav = styled.nav`
   float: right;
         
   ul {
-    margin: 0 0 14px 30px;
+    margin: 0;
     padding: 0;
 
     li {

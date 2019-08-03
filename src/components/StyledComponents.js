@@ -100,6 +100,10 @@ const StyledMain = styled.section`
   background-color: #fff;
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
 
+  @media (max-width: 768px) {
+    flex: 0 0 100%
+  }
+
   p {
       line-height: 1.6;
       text-align: justify
@@ -114,6 +118,10 @@ const StyledSidebar = styled.aside`
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,.2);
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%
+  }
 
   p {
     line-height: 1.6;
@@ -131,15 +139,22 @@ const StyledFooter = styled.footer`
   color: #fff;
   line-height: 1.6;
   margin-top: 30px;
-  width: 100%
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between
 `;
 export const Footer = (props) => <StyledFooter {...props} />
 
 const StyledFooterNav = styled.nav`
   display: inline-block;
   text-align: center;
-  float: right;
   padding: 15px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%
+  }
         
   ul {
     margin: 0;
@@ -150,6 +165,11 @@ const StyledFooterNav = styled.nav`
       font-size: 1em;
       margin-left: 25px;
       white-space: nowrap;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+        padding: 12.5px
+      }
 
       a {
         color: #fff;
@@ -169,6 +189,12 @@ const StyledCopyright = styled.p`
   margin: 0;
   display: inline-block;
   padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%
+  }
 
   a {
     color: #fff;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import '../assets/scss/main.scss';
+import { GlobalStyles } from './StyledComponents';
 import HeaderComponent from './Header';
 import MainNavigation from './MainNavigation';
 import HomeComponent from './Home';
@@ -14,6 +14,8 @@ export default class App extends Component {
   render() {
     return ( 
       <BrowserRouter>
+
+        <GlobalStyles />
 
         <HeaderComponent />
         <MainNavigation />

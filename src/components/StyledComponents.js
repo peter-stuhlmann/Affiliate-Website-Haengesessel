@@ -1,5 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const StyledGlobalStyles = createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+  }
+`;
+export const GlobalStyles = (props) => <StyledGlobalStyles {...props} />
 
 const StyledWrapper = styled.div`
   display: flex;

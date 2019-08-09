@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "website-template",
+    "name": "haengesessel",
     "builds": [
       {
         "src": "package.json",

@@ -11,7 +11,31 @@ import LegalNotice from './LegalNotice';
 
 export default class App extends Component {
 
+  constructor(props) {
+    super()
+
+    this.state = {
+      products: {}
+    }
+  }
+
+  productsFetch() {
+    fetch('products.json')
+      .then(response => response.json())
+      .then(products => {
+        this.setState(state => {
+          state.products = products;
+          return state;
+        });
+      });
+  }
+
+  componentDidMount() {
+    this.productsFetch()
+  }
+
   render() {
+
     return ( 
       <BrowserRouter>
 
@@ -21,7 +45,7 @@ export default class App extends Component {
         <MainNavigation />
 
         <Switch>
-          <Route exact path="/" component={ HomeComponent } />
+          <Route exact path="/" render={(props) => <HomeComponent {...props} products={this.state.products} />} />
           <Route exact path="/datenschutzerklaerung" component={ PrivacyPolicy } />
           <Route exact path="/impressum" component={ LegalNotice } />
           <Route component={ NotFound } />

@@ -121,6 +121,10 @@ const StyledMain = styled.section`
       line-height: 1.6;
       text-align: justify
   }
+
+  img {
+    max-width: 100%
+  }
 `;
 export const Main = (props) => <StyledMain {...props} />
 

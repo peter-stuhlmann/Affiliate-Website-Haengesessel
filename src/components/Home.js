@@ -13,6 +13,9 @@ export default class HomeComponent extends Component {
     }
 
     render() {
+
+      const product = this.props.products;
+
       return (
         <Wrapper>
           <Main>
@@ -20,6 +23,10 @@ export default class HomeComponent extends Component {
             <h2>Einleitung</h2>
             <p>Auf der Suche nach einem Hängesessel bist du hier genau richtig. Für einen passenden, deinen Vorstellungen entsprechenden Hängesessel mit Gestell. Alles, was man wissen muss. Zusammengefasst und ansehnlich für Sie aufgearbeitet. Und dabei alles auf nur einer Seite. Bei den <strong>Hängesesseln mit Gestell</strong> gestaltet es sich schwierig einen hochwertigen Hängesessel zu finden. Primär auf Grund der <strong>riesigen Auswahl</strong> beziehungsweise der unglaublichen <strong>Variantenvielfalt</strong>. Zusätzlich zu den Hängesesseln gibt es mittlerweile auch noch Hängesitze und Hängehöhlen. Diese werden weiter unten noch ausführlicher erklärt und bildlich versehen.<br />
               Kurzum ist solch ein Hängesessel mit Gestell eine oft unterschätzte Alternative zur (gewöhnlichen) Hängematte.</p>
+
+            <a href={ product[0] && product[0].url } target="_blanc">
+              <img src={ product[0] && product[0].img[0] } alt={ product[0] && product[0].originalTitle } title={ product[0] && product[0].title } />
+            </a>
 
             <h2>Entspannung im Hängesessel</h2>
             <strong>Hängesessel? Der optimale Ort zum Entspannen!</strong>

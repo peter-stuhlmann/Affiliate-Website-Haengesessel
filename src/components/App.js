@@ -8,15 +8,15 @@ import NotFound from './NotFound';
 import FooterComponent from './Footer';
 import PrivacyPolicy from './PrivacyPolicy';
 import LegalNotice from './LegalNotice';
+import ContextProvider from '../Context';
 
 export default class App extends Component {
-
   constructor(props) {
-    super()
+    super();
 
     this.state = {
-      products: {}
-    }
+      products: {},
+    };
   }
 
   productsFetch() {
@@ -31,30 +31,38 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.productsFetch()
+    this.productsFetch();
   }
 
   render() {
+    return (
+      <ContextProvider>
+        <BrowserRouter>
+          <GlobalStyles />
 
-    return ( 
-      <BrowserRouter>
+          <HeaderComponent />
+          <MainNavigation />
 
-        <GlobalStyles />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <HomeComponent {...props} products={this.state.products} />
+              )}
+            />
+            <Route
+              exact
+              path="/datenschutzerklaerung"
+              component={PrivacyPolicy}
+            />
+            <Route exact path="/impressum" component={LegalNotice} />
+            <Route component={NotFound} />
+          </Switch>
 
-        <HeaderComponent />
-        <MainNavigation />
-
-        <Switch>
-          <Route exact path="/" render={(props) => <HomeComponent {...props} products={this.state.products} />} />
-          <Route exact path="/datenschutzerklaerung" component={ PrivacyPolicy } />
-          <Route exact path="/impressum" component={ LegalNotice } />
-          <Route component={ NotFound } />
-        </Switch>
-        
-        <FooterComponent />
-      
-      </BrowserRouter>
-    )
+          <FooterComponent />
+        </BrowserRouter>
+      </ContextProvider>
+    );
   }
-
 }

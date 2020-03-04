@@ -9,8 +9,11 @@ export default function NotFound() {
   return (
     <Wrapper>
       <Main>
-        <h1>{text.notFound.heading}</h1>
-        <p>{text.notFound.content}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: text.notFound,
+          }}
+        />
         <Link to="/">Home</Link>
       </Main>
     </Wrapper>

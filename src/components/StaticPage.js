@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import { Context } from '../Context';
-import { Wrapper, Main } from './StyledComponents';
 
 export default function StaticPage() {
   const { text } = useContext(Context);
@@ -9,9 +9,6 @@ export default function StaticPage() {
   let path = document.location.pathname;
 
   switch (path) {
-    case '/':
-      content = text.home;
-      break;
     case '/impressum':
       content = text.legalNotice;
       break;
@@ -22,14 +19,18 @@ export default function StaticPage() {
   }
 
   return (
-    <Wrapper>
-      <Main>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: content,
-          }}
-        />
-      </Main>
-    </Wrapper>
+    <StyledStaticPage
+      dangerouslySetInnerHTML={{
+        __html: content,
+      }}
+    />
   );
 }
+
+const StyledStaticPage = styled.main`
+  box-sizing: border-box;
+  margin: 30px auto;
+  max-width: 1170px;
+  padding: 15px;
+  width: 100%;
+`;

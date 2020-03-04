@@ -13,7 +13,7 @@ export default function HeaderComponent() {
           <ul>
             {text.headerNavigation.map(nav => (
               <li key={nav.title}>
-                <Link to={nav.url}>{nav.title}</Link>
+                <Link to={nav.path}>{nav.title}</Link>
               </li>
             ))}
           </ul>

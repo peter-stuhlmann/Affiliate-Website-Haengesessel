@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Context } from '../Context';
+import { LinkedImage } from './Image';
 
 export default function Home() {
-  const { text } = useContext(Context);
+  const { text, products } = useContext(Context);
 
   return (
     <StyledWrapper>
@@ -13,6 +14,16 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: text.home.content[0].text,
         }}
+      />
+
+      <LinkedImage
+        alt={products[0].alt}
+        caption={products[0].caption}
+        href={products[0].href}
+        source={products[0].source}
+        src={products[0].src}
+        title={products[0].title}
+        width={products[0].width}
       />
 
       <h2>{text.home.content[1].heading}</h2>

@@ -1,19 +1,19 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { Context } from '../Context';
-import { Wrapper, Footer, Copyright, FooterNav } from './StyledComponents';
 
 export default function FooterComponent() {
   const { text } = useContext(Context);
 
   return (
-    <Footer>
-      <Wrapper>
-        <Copyright>
+    <StyledFooter>
+      <div>
+        <p>
           &copy; <a href={text.copyright.path}>{text.copyright.title}</a>,{' '}
           {text.copyright.year}
-        </Copyright>
-        <FooterNav>
+        </p>
+        <nav>
           <ul>
             {text.footerNavigation.map(nav => (
               <li key={nav.title}>
@@ -21,8 +21,89 @@ export default function FooterComponent() {
               </li>
             ))}
           </ul>
-        </FooterNav>
-      </Wrapper>
-    </Footer>
+        </nav>
+      </div>
+    </StyledFooter>
   );
 }
+
+const StyledFooter = styled.footer`
+  background-color: #9c4808;
+  color: #fff;
+  line-height: 1.6;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap row;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    p {
+      margin: 0;
+      display: inline-block;
+      padding: 15px;
+      text-align: center;
+      box-sizing: border-box;
+
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s ease all;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    nav {
+      display: inline-block;
+      text-align: center;
+      padding: 15px;
+      box-sizing: border-box;
+
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline;
+          font-size: 1em;
+          margin-left: 25px;
+          white-space: nowrap;
+
+          @media (max-width: 768px) {
+            margin-left: 0;
+            padding: 12.5px;
+          }
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s ease all;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+`;

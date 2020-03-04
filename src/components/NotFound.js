@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Wrapper, Main, Sidebar } from './StyledComponents';
-import { TextWidget, ImageWidget } from './SidebarWidgets';
+import { Context } from '../Context';
+import { Wrapper, Main } from './StyledComponents';
 
 export default function NotFound() {
+  const { text } = useContext(Context);
+
   return (
     <Wrapper>
       <Main>
-        <h1>Error 404</h1>
-        <p>Sorry, diese Seite ist leider nicht (mehr) verfügbar.</p>
+        <h1>{text.notFound.heading}</h1>
+        <p>{text.notFound.content}</p>
         <Link to="/">Home</Link>
       </Main>
-      <Sidebar>
-        <TextWidget />
-        <ImageWidget />
-      </Sidebar>
     </Wrapper>
   );
 }

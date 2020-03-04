@@ -1,25 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../Context';
 import { MainNavigation, Wrapper } from './StyledComponents';
 
 export default function HeaderComponent() {
+  const { text } = useContext(Context);
+
   return (
     <MainNavigation>
       <Wrapper>
         <nav>
           <ul>
-            <li>
-              <Link to="#">Lorem ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem ipsum</Link>
-            </li>
-            <li>
-              <Link to="#">Lorem ipsum</Link>
-            </li>
+            {text.headerNavigation.map(nav => (
+              <li key={nav.title}>
+                <Link to={nav.url}>{nav.title}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </Wrapper>

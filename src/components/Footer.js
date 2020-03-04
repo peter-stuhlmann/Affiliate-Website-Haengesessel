@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../Context';
 import { Wrapper, Footer, Copyright, FooterNav } from './StyledComponents';
 
 export default function FooterComponent() {
+  const { text } = useContext(Context);
+
   return (
     <Footer>
       <Wrapper>
         <Copyright>
-          &copy; <a href="https://peter-stuhlmann.de/">Peter R. Stuhlmann</a>,
-          2019
+          &copy; <a href={text.copyright.path}>{text.copyright.title}</a>,{' '}
+          {text.copyright.year}
         </Copyright>
         <FooterNav>
           <ul>
-            <li>
-              <Link to="/impressum">Impressum</Link>
-            </li>
-            <li>
-              <Link to="/datenschutzerklaerung">Datenschutzerklärung</Link>
-            </li>
+            {text.footerNavigation.map(nav => (
+              <li key={nav.title}>
+                <Link to={nav.path}>{nav.title}</Link>
+              </li>
+            ))}
           </ul>
         </FooterNav>
       </Wrapper>

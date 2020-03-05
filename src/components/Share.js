@@ -9,6 +9,10 @@ export const ShareButtons = props => {
     color,
     fontFamily,
     fontSize,
+    marginX,
+    maxWidth,
+    paddingX,
+    width,
   } = props;
 
   const share = {
@@ -24,6 +28,10 @@ export const ShareButtons = props => {
       color={color}
       fontFamily={fontFamily}
       fontSize={fontSize}
+      marginX={marginX}
+      maxWidth={maxWidth}
+      paddingX={paddingX}
+      width={width}
     >
       <h3>{share.heading}</h3>
 
@@ -47,8 +55,11 @@ export const ShareButtons = props => {
 
 const StyledShare = styled.aside`
   border-bottom: 1px solid #eee;
-  margin: 40px 0 30px;
-  padding-bottom: 30px;
+  box-sizing: border-box;
+  margin: ${props => props.marginX || '30px auto'};
+  max-width: ${props => props.maxWidth || '1170px'};
+  padding: ${props => props.paddingX || '15px 15px 30px 15px'};
+  width: ${props => props.width || '100%'};
 
   h3 {
     margin-bottom: 9px;

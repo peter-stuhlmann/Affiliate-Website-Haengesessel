@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { Context } from '../Context';
 import Home from './pages/Home';
 import StaticPage from './pages/StaticPage';
@@ -34,6 +34,7 @@ export default function Router() {
           />
         )}
       />
+      <Route exact path="/haengesessel" render={() => <Redirect to="/" />} />
       <Route
         exact
         path="/kaufberatung"

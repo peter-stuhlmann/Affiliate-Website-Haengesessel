@@ -1,28 +1,16 @@
-import React, { useContext } from 'react';
-import { Context } from '../../Context';
+import React from 'react';
 import { Wrapper } from '../Wrapper';
 
-export default function StaticPage() {
-  const { text } = useContext(Context);
-
-  let content;
-  let path = document.location.pathname;
-
-  switch (path) {
-    case '/impressum':
-      content = text.legalNotice;
-      break;
-    case '/datenschutzerklaerung':
-      content = text.privacyPolicy;
-      break;
-    default: // ...
-  }
+export default function StaticPage(props) {
+  const { content } = props;
 
   return (
-    <Wrapper
-      dangerouslySetInnerHTML={{
-        __html: content,
-      }}
-    />
+    <>
+      <Wrapper
+        dangerouslySetInnerHTML={{
+          __html: content,
+        }}
+      />
+    </>
   );
 }

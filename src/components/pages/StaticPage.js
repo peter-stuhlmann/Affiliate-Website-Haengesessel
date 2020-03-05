@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Context } from '../Context';
+import { Context } from '../../Context';
 
 export default function StaticPage() {
   const { text } = useContext(Context);

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from './Home';
-import StaticPage from './StaticPage';
-import NotFound from './NotFound';
+import Home from './pages/Home';
+import StaticPage from './pages/StaticPage';
+import NotFound from './pages/NotFound';
 
 export default function Router() {
   return (

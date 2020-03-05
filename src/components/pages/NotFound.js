@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from '../Context';
-import { Wrapper, Main } from './StyledComponents';
+import { Context } from '../../Context';
+import { Wrapper, Main } from '../StyledComponents';
 
 export default function NotFound() {
   const { text } = useContext(Context);

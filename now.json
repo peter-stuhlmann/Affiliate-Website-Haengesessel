@@ -1,29 +1,37 @@
 {
-    "version": 2,
-    "name": "haengesessel",
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@now/static-build",
-        "config": { "distDir": "build" }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/static/(.*)",
-        "headers": { "cache-control": "s-maxage=31536000,immutable" },
-        "dest": "/static/$1"
-      },
-      { "src": "/robots.txt", "dest": "/robots.txt" },
-      {
-        "src": "/service-worker.js",
-        "headers": { "cache-control": "s-maxage=0" },
-        "dest": "/service-worker.js"
-      },
-      {
-        "src": "/(.*)",
-        "headers": { "cache-control": "s-maxage=0" },
-        "dest": "/index.html"
-      }
-    ]
+  "version": 2,
+  "name": "haengesessel",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000,immutable" },
+      "dest": "/static/$1"
+    },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/android-icon-192x192.png", "dest": "/android-icon-192x192.png" },
+    { "src": "/apple-icon-57x57.png", "dest": "/apple-icon-57x57.png" },
+    { "src": "/apple-icon-60x60.png", "dest": "/apple-icon-60x60.png" },
+    { "src": "/apple-icon-72x72.png", "dest": "/apple-icon-72x72.png" },
+    { "src": "/apple-icon-76x76.png", "dest": "/apple-icon-76x76.png" },
+    { "src": "/apple-icon-114x114.png", "dest": "/apple-icon-114x114.png" },
+    { "src": "/apple-icon-120x120.png", "dest": "/apple-icon-120x120.png" },
+    { "src": "/apple-icon-144x144.png", "dest": "/apple-icon-144x144.png" },
+    { "src": "/apple-icon-152x152.png", "dest": "/apple-icon-152x152.png" },
+    { "src": "/apple-icon-180x180.png", "dest": "/apple-icon-180x180.png" },
+    { "src": "/favicon-32x32.png", "dest": "/favicon-32x32.png" },
+    { "src": "/favicon-96x96.png", "dest": "/favicon-96x96.png" },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/index.html"
+    }
+  ]
 }

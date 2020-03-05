@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import { Context } from '../../Context';
+import { Wrapper } from '../Wrapper';
 
 export default function StaticPage() {
   const { text } = useContext(Context);
@@ -19,18 +19,10 @@ export default function StaticPage() {
   }
 
   return (
-    <StyledStaticPage
+    <Wrapper
       dangerouslySetInnerHTML={{
         __html: content,
       }}
     />
   );
 }
-
-const StyledStaticPage = styled.main`
-  box-sizing: border-box;
-  margin: 30px auto;
-  max-width: 1170px;
-  padding: 15px;
-  width: 100%;
-`;

@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import { Context } from '../../Context';
 import { LinkedImage } from '../Image';
 import { ShareButtons } from '../Share';
+import { Wrapper } from '../Wrapper';
 
 export default function Home() {
   const { text, products } = useContext(Context);
 
   return (
-    <StyledWrapper>
+    <Wrapper>
       <h1>{text.home.heading}</h1>
       <h2>{text.home.content[0].heading}</h2>
       <div
@@ -41,14 +41,6 @@ export default function Home() {
         }}
       />
       <ShareButtons />
-    </StyledWrapper>
+    </Wrapper>
   );
 }
-
-const StyledWrapper = styled.main`
-  box-sizing: border-box;
-  margin: 30px auto;
-  max-width: 1170px;
-  padding: 15px;
-  width: 100%;
-`;

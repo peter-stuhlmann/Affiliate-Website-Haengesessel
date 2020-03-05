@@ -56,7 +56,7 @@ export const ShareButtons = props => {
 const StyledShare = styled.aside`
   border-bottom: 1px solid #eee;
   box-sizing: border-box;
-  margin: ${props => props.marginX || '30px auto'};
+  margin: ${props => props.marginX || '0 auto 90px auto'};
   max-width: ${props => props.maxWidth || '1170px'};
   padding: ${props => props.paddingX || '15px 15px 30px 15px'};
   width: ${props => props.width || '100%'};
@@ -72,7 +72,7 @@ const StyledShare = styled.aside`
     font-family: ${props => props.fontFamily || "'Open Sans', sans-serif"};
     font-weight: 400;
     border-radius: ${props => props.borderRadius || '3px'};
-    color: ${props => props.color || '#777'};
+    color: ${props => props.color || '#545454'};
     background-color: ${props => props.backgroundColor || '#f8f8f8'};
     border: 1px solid ${props => props.borderColor || '#ccc'};
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
@@ -82,7 +82,7 @@ const StyledShare = styled.aside`
     transition: 0.2s ease all;
 
     svg {
-      fill: ${props => props.color || '#777'};
+      fill: ${props => props.color || '#545454'};
       height: ${props => props.fontSize || '15px'};
       margin: 0 5px -3px 0;
     }

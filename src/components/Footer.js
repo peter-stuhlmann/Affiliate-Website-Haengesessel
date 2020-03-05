@@ -10,7 +10,7 @@ export default function FooterComponent() {
     <StyledFooter>
       <div>
         <p>
-          &copy; <a href={text.copyright.path}>{text.copyright.title}</a>,{' '}
+          &copy; <Link to={text.copyright.path}>{text.copyright.title}</Link>,{' '}
           {text.copyright.year}
         </p>
         <nav>

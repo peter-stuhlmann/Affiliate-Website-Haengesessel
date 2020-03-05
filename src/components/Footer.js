@@ -6,12 +6,14 @@ import { Context } from '../Context';
 export default function FooterComponent() {
   const { text } = useContext(Context);
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <StyledFooter>
       <div>
         <p>
           &copy; <Link to={text.copyright.path}>{text.copyright.title}</Link>,{' '}
-          {text.copyright.year}
+          {text.copyright.startYear} - {currentYear}
         </p>
         <nav>
           <ul>

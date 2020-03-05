@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Context } from '../Context';
 import { LinkedImage } from './Image';
+import { ShareButtons } from './Share';
 
 export default function Home() {
   const { text, products } = useContext(Context);
@@ -39,6 +40,7 @@ export default function Home() {
           __html: text.home.content[2].text,
         }}
       />
+      <ShareButtons />
     </StyledWrapper>
   );
 }

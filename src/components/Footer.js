@@ -4,9 +4,14 @@ import styled from 'styled-components';
 import { Context } from '../Context';
 
 export default function FooterComponent() {
-  const { text } = useContext(Context);
+  const { text, toggleTracking, tracking } = useContext(Context);
 
   const currentYear = new Date().getFullYear();
+
+  let button;
+  tracking === false
+    ? (button = text.tracking.activate)
+    : (button = text.tracking.deactivate);
 
   return (
     <StyledFooter>
@@ -17,6 +22,11 @@ export default function FooterComponent() {
         </p>
         <nav>
           <ul>
+            <li>
+              <span style={{ cursor: 'pointer' }} onClick={toggleTracking}>
+                {button}
+              </span>
+            </li>
             {text.footerNavigation.map(nav => (
               <li key={nav.title}>
                 <Link to={nav.path}>{nav.title}</Link>

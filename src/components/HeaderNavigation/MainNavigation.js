@@ -46,10 +46,6 @@ const StyledMainNavigation = styled.div`
   position: sticky;
   top: 0;
 
-  @media (min-width: 1650px) {
-    padding: 0;
-  }
-
   a {
     font-weight: bold;
     letter-spacing: 1.5px;

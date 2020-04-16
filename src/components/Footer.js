@@ -27,7 +27,7 @@ export default function FooterComponent() {
                 {button}
               </span>
             </li>
-            {text.footerNavigation.map(nav => (
+            {text.footerNavigation.map((nav) => (
               <li key={nav.title}>
                 <Link to={nav.path}>{nav.title}</Link>
               </li>
@@ -65,7 +65,7 @@ const StyledFooter = styled.footer`
       text-align: center;
       box-sizing: border-box;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1170px) {
         flex: 0 0 100%;
       }
 
@@ -86,7 +86,7 @@ const StyledFooter = styled.footer`
       padding: 15px;
       box-sizing: border-box;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1170px) {
         flex: 0 0 100%;
       }
 
@@ -94,15 +94,19 @@ const StyledFooter = styled.footer`
         margin: 0;
         padding: 0;
 
+        @media (max-width: 1170px) {
+          display: block;
+        }
+
         li {
           display: inline;
           font-size: 1em;
           margin-left: 25px;
           white-space: nowrap;
 
-          @media (max-width: 768px) {
+          @media (max-width: 1170px) {
+            display: block;
             margin-left: 0;
-            padding: 12.5px;
           }
 
           a {

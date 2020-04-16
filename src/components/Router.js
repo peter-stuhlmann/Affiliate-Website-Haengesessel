@@ -1,6 +1,5 @@
-import React, { Fragment, useContext } from 'react';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { Context } from '../Context';
 import Home from './pages/Home';
 import StaticPage from './pages/StaticPage';
 import NotFound from './pages/NotFound';
@@ -14,7 +13,8 @@ export default function Router() {
       <Route exact path="/impressum" component={ga(StaticPage)} />
       <Route exact path="/haengesessel" render={() => <Redirect to="/" />} />
       <Route exact path="/kaufberatung" component={ga(StaticPage)} />
-      <Route component={NotFound} />
+      <Route exact path="/kontakt" component={ga(StaticPage)} />
+      <Route component={ga(NotFound)} />
     </Switch>
   );
 }

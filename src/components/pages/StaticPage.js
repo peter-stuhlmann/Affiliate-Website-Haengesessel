@@ -28,14 +28,17 @@ export default function StaticPage() {
       title = text.buyingAdvice.meta.title;
       share = true;
       break;
+    case '/kontakt':
+      content = text.contact.content;
+      description = text.contact.meta.description;
+      title = text.contact.meta.title;
+      share = false;
+      break;
     default: // ...
   }
 
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
-
-  meta(description);
+  document.title = title;
+  meta('name', 'description', description);
 
   return (
     <Fragment>
@@ -44,7 +47,7 @@ export default function StaticPage() {
           __html: content,
         }}
       />
-      {share ? <ShareButtons /> : ''}
+      {share ? <ShareButtons /> : null}
     </Fragment>
   );
 }

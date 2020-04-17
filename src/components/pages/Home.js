@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Context } from '../../Context';
 import { LinkedImage } from '../Image';
 import { ShareButtons } from '../Share';
@@ -8,11 +8,8 @@ import { meta } from '../../helper/meta';
 export default function Home() {
   const { text, products } = useContext(Context);
 
-  useEffect(() => {
-    document.title = text.home.meta.title;
-  }, [text.home.meta.title]);
-
-  meta(text.home.meta.description);
+  document.title = text.home.meta.title;
+  meta('name', 'description', text.home.meta.description);
 
   return (
     <Fragment>

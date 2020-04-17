@@ -43,7 +43,6 @@ const StyledNavbar = styled.nav`
   span {
     color: #fff;
     font-size: 16px;
-    font-weight: bold;
     letter-spacing: 1.5px;
     padding: 7px 12px;
     text-decoration: none;

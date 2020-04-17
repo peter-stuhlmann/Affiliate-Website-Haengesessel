@@ -42,12 +42,12 @@ export default function MainNavigation() {
 const StyledMainNavigation = styled.div`
   background-color: #9c4808;
   display: flex;
-  padding: 15px 0;
+  font-family: 'Open Sans', sans-serif;
+  padding: 15px 3px;
   position: sticky;
   top: 0;
 
   a {
-    font-weight: bold;
     letter-spacing: 1.5px;
   }
 

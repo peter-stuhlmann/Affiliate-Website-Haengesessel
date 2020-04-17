@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { GlobalStyles } from './StyledComponents';
+import { GlobalStyles } from './GlobalStyles';
 import HeaderComponent from './Header';
 import MainNavigation from './HeaderNavigation/MainNavigation';
 import FooterComponent from './Footer';

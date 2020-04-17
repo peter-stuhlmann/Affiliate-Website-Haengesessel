@@ -42,7 +42,7 @@ export default function MainNavigation() {
 const StyledMainNavigation = styled.div`
   background-color: #9c4808;
   display: flex;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Viga', sans-serif;
   padding: 15px 3px;
   position: sticky;
   top: 0;

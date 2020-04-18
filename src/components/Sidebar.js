@@ -10,28 +10,26 @@ export default function Sidebar() {
   return (
     <StyledSidebar>
       {text.sidebar.map((widget) => (
-        <Fragment>
-          <section key={widget.heading}>
-            <h2>{widget.heading}</h2>
-            {widget.content.map((paragraph) => (
-              <section key={paragraph.heading}>
-                <h3>{paragraph.heading}</h3>
-                {paragraph.img ? (
-                  <img src={paragraph.img.src} alt={paragraph.img.alt} />
-                ) : null}
-                {paragraph.rating
-                  ? `${paragraph.rating.stars} / 5
+        <Fragment key={widget.heading}>
+          <h2>{widget.heading}</h2>
+          {widget.content.map((paragraph) => (
+            <section key={paragraph.heading}>
+              <h3>{paragraph.heading}</h3>
+              {paragraph.img ? (
+                <img src={paragraph.img.src} alt={paragraph.img.alt} />
+              ) : null}
+              {paragraph.rating
+                ? `${paragraph.rating.stars} / 5
                   ${text.products.rating.pre} ${paragraph.rating.amount} ${text.products.rating.suf}`
-                  : null}
-                {paragraph.link ? (
-                  <Button
-                    href={paragraph.link.href}
-                    linkText={text.buttons.affiliate.linkText}
-                  />
-                ) : null}
-              </section>
-            ))}
-          </section>
+                : null}
+              {paragraph.link ? (
+                <Button
+                  href={paragraph.link.href}
+                  linkText={text.buttons.affiliate.linkText}
+                />
+              ) : null}
+            </section>
+          ))}
           <hr />
         </Fragment>
       ))}

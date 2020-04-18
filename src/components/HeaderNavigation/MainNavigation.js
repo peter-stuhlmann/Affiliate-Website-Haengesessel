@@ -32,9 +32,6 @@ export default function MainNavigation() {
     <StyledMainNavigation ref={node}>
       <ToggleButton open={open} setOpen={setOpen} />
       <Navbar open={open} setOpen={setOpen} />
-      <div className="site-title-mobile">
-        <Link to="/">{text.headerNavigation.siteTitle}</Link>
-      </div>
     </StyledMainNavigation>
   );
 }
@@ -49,22 +46,5 @@ const StyledMainNavigation = styled.div`
 
   a {
     letter-spacing: 1.5px;
-  }
-
-  .site-title-mobile {
-    margin-left: 15px;
-    text-align: center;
-    width: 100%;
-    font-size: 16px;
-
-    @media (min-width: 1000px) {
-      display: none;
-    }
-
-    a {
-      color: #fff;
-      letter-spacing: 1.5px;
-      text-decoration: none;
-    }
   }
 `;

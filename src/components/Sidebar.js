@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from 'react';
 import styled from 'styled-components';
 
 import { Context } from '../Context';
+import { Button } from './Buttons';
 
 export default function Sidebar() {
   const { text } = useContext(Context);
@@ -23,9 +24,10 @@ export default function Sidebar() {
                   ${text.products.rating.pre} ${paragraph.rating.amount} ${text.products.rating.suf}`
                   : null}
                 {paragraph.link ? (
-                  <a href={paragraph.link.href}>
-                    {text.buttons.affiliate.linkText}
-                  </a>
+                  <Button
+                    href={paragraph.link.href}
+                    linkText={text.buttons.affiliate.linkText}
+                  />
                 ) : null}
               </section>
             ))}

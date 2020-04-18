@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Amazon } from './Icons';
+
 export const Button = (props) => {
   const {
     backgroundColor,
@@ -23,7 +25,7 @@ export const Button = (props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {linkText}
+      {linkText} <Amazon />
     </StyledButton>
   );
 };
@@ -45,5 +47,12 @@ const StyledButton = styled.a`
 
   &:hover {
     background-color: ${(props) => props.backgroundColorHover || '#431f04'};
+  }
+
+  svg {
+    fill: ${(props) => props.color || '#fff'};
+    height: 20px;
+    margin-bottom: -5px
+    margin-left: 2px;
   }
 `;

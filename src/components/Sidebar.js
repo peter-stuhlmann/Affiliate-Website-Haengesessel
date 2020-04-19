@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { Context } from '../Context';
 import { Button } from './Buttons';
+import Stars from './Stars';
 
 export default function Sidebar() {
   const { text } = useContext(Context);
@@ -18,10 +19,14 @@ export default function Sidebar() {
               {paragraph.img ? (
                 <img src={paragraph.img.src} alt={paragraph.img.alt} />
               ) : null}
-              {paragraph.rating
-                ? `${paragraph.rating.stars} / 5
-                  ${text.products.rating.pre} ${paragraph.rating.amount} ${text.products.rating.suf}`
-                : null}
+              {paragraph.rating ? (
+                <p>
+                  <Stars rating={paragraph.rating.stars} />
+                  <br />
+                  {paragraph.rating.stars} / 5 {text.products.rating.pre}
+                  {paragraph.rating.amount} {text.products.rating.suf}
+                </p>
+              ) : null}
               {paragraph.link ? (
                 <Button
                   href={paragraph.link.href}

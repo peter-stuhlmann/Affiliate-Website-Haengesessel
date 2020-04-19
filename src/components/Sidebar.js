@@ -17,10 +17,16 @@ export default function Sidebar() {
             <section key={paragraph.heading}>
               <h3>{paragraph.heading}</h3>
               {paragraph.img ? (
-                <img src={paragraph.img.src} alt={paragraph.img.alt} />
+                <a
+                  href={paragraph.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={paragraph.img.src} alt={paragraph.img.alt} />
+                </a>
               ) : null}
               {paragraph.rating ? (
-                <p>
+                <p title={paragraph.rating.date}>
                   <Stars rating={paragraph.rating.stars} />
                   <br />
                   {paragraph.rating.stars} / 5 {text.products.rating.pre}

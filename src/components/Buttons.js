@@ -7,9 +7,11 @@ export const Button = (props) => {
   const {
     backgroundColor,
     backgroundColorHover,
+    className,
     color,
     href,
     linkText,
+    style,
     maxWidth,
     width,
   } = props;
@@ -18,10 +20,12 @@ export const Button = (props) => {
     <StyledButton
       backgroundColor={backgroundColor}
       backgroundColorHover={backgroundColorHover}
+      className={className}
       color={color}
       href={href}
       maxWidth={maxWidth}
       width={width}
+      style={style}
       target="_blank"
       rel="noopener noreferrer"
     >

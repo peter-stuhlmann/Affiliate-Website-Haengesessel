@@ -16,12 +16,6 @@ export default function StaticPage() {
       title = text.privacyPolicy.meta.title;
       share = false;
       break;
-    case '/kaufberatung':
-      content = text.buyingAdvice.content;
-      description = text.buyingAdvice.meta.description;
-      title = text.buyingAdvice.meta.title;
-      share = true;
-      break;
     default: // ...
   }
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 
 import { Wrapper } from '../Wrapper';
 import { Context } from '../../Context';
@@ -19,15 +19,19 @@ export default function BuyingAdvice() {
         <h2>{text.buyingAdvice.content.summary.heading}</h2>
         <ul>
           {text.buyingAdvice.content.summary.list.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
 
         {text.buyingAdvice.content.details.map((item) => (
-          <p>
+          <Fragment key={item.heading}>
             <h3>{item.heading}</h3>
-            <p>{item.text}</p>
-          </p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: item.text,
+              }}
+            />
+          </Fragment>
         ))}
       </Main>
       <Sidebar />

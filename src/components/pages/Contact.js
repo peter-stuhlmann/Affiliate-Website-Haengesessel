@@ -4,6 +4,7 @@ import { Wrapper } from '../Wrapper';
 import { Context } from '../../Context';
 import { meta } from '../../helper/meta';
 import { Main } from '../Main';
+import { ShareButtons } from '../Share';
 
 export default function Contact() {
   const { text } = useContext(Context);
@@ -23,6 +24,7 @@ export default function Contact() {
           {text.contact.mail.description}
           <a href={text.contact.mail.href}>{text.contact.mail.linkText}</a>
         </p>
+        <ShareButtons />
       </Main>
     </Wrapper>
   );

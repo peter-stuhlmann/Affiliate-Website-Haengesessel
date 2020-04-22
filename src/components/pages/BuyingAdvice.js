@@ -5,6 +5,7 @@ import { Context } from '../../Context';
 import { meta } from '../../helper/meta';
 import { Main } from '../Main';
 import Sidebar from '../Sidebar';
+import { ShareButtons } from '../Share';
 
 export default function BuyingAdvice() {
   const { text } = useContext(Context);
@@ -33,6 +34,7 @@ export default function BuyingAdvice() {
             />
           </Fragment>
         ))}
+        <ShareButtons />
       </Main>
       <Sidebar />
     </Wrapper>

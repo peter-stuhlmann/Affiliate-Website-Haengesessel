@@ -51,10 +51,10 @@ export default function Home() {
               __html: text.home.content[2].text,
             }}
           />
+          <ShareButtons />
         </Main>
         <Sidebar />
       </Wrapper>
-      <ShareButtons />
     </Fragment>
   );
 }

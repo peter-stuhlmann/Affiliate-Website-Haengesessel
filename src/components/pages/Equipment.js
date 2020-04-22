@@ -13,7 +13,6 @@ export default function Equipment() {
   document.title = text.equipment.meta.title;
   meta('name', 'description', text.equipment.meta.description);
 
-  document.getElementsByTagName('title')[0] = 'Hallo';
   return (
     <Wrapper>
       <Main>

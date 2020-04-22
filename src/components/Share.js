@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const ShareButtons = props => {
+export const ShareButtons = (props) => {
   const {
     backgroundColor,
     borderColor,
@@ -35,7 +35,7 @@ export const ShareButtons = props => {
     >
       <h3>{share.heading}</h3>
 
-      {share.buttons.map(button => (
+      {share.buttons.map((button) => (
         <a
           key={button.href}
           href={button.href}
@@ -56,10 +56,10 @@ export const ShareButtons = props => {
 const StyledShare = styled.aside`
   border-bottom: 1px solid #eee;
   box-sizing: border-box;
-  margin: ${props => props.marginX || '0 auto 90px auto'};
-  max-width: ${props => props.maxWidth || '1170px'};
-  padding: ${props => props.paddingX || '15px 15px 30px 15px'};
-  width: ${props => props.width || '100%'};
+  margin: ${(props) => props.marginX || '0 auto 50px auto'};
+  max-width: ${(props) => props.maxWidth || '1170px'};
+  padding: ${(props) => props.paddingX || '15px 0'};
+  width: ${(props) => props.width || '100%'};
 
   h3 {
     margin-bottom: 9px;
@@ -68,13 +68,13 @@ const StyledShare = styled.aside`
   a {
     text-decoration: none;
     display: inline-block;
-    font-size: ${props => props.fontSize || '12px'};
-    font-family: ${props => props.fontFamily || "'Open Sans', sans-serif"};
+    font-size: ${(props) => props.fontSize || '12px'};
+    font-family: ${(props) => props.fontFamily || "'Open Sans', sans-serif"};
     font-weight: 400;
-    border-radius: ${props => props.borderRadius || '3px'};
-    color: ${props => props.color || '#545454'};
-    background-color: ${props => props.backgroundColor || '#f8f8f8'};
-    border: 1px solid ${props => props.borderColor || '#ccc'};
+    border-radius: ${(props) => props.borderRadius || '3px'};
+    color: ${(props) => props.color || '#545454'};
+    background-color: ${(props) => props.backgroundColor || '#f8f8f8'};
+    border: 1px solid ${(props) => props.borderColor || '#ccc'};
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
     line-height: 23px;
     padding: 1px 8px;
@@ -82,15 +82,15 @@ const StyledShare = styled.aside`
     transition: 0.2s ease all;
 
     svg {
-      fill: ${props => props.color || '#545454'};
-      height: ${props => props.fontSize || '15px'};
+      fill: ${(props) => props.color || '#545454'};
+      height: ${(props) => props.fontSize || '15px'};
       margin: 0 5px -3px 0;
     }
   }
 `;
 
 const options = {
-  heading: 'Share this article',
+  heading: 'Diesen Artikel teilen',
   buttons: [
     {
       title: 'WhatsApp',
@@ -123,7 +123,7 @@ const options = {
       href: `https://www.tumblr.com/share/link?url=${window.location.href}`,
     },
     {
-      title: 'Mail',
+      title: 'E-Mail',
       icon:
         'M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z',
       href: `mailto:?Subject=${window.document.title}&amp;Body=${window.location.href}`,

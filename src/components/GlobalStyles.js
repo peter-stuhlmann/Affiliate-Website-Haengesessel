@@ -35,5 +35,19 @@ export const GlobalStyles = createGlobalStyle`
     h1 {
       font-size: 2em;
     }
+
+    
+  }
+
+  // scrollbar
+  ::-webkit-scrollbar {
+    width: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #dcdcdc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #9c4808 ;
+    border-radius: 3px;
   }
 `;

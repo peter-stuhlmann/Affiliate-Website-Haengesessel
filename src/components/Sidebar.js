@@ -54,10 +54,19 @@ const StyledSidebar = styled.aside`
   box-shadow: ${(props) =>
     props.boxShadow || '5px 5px 10px 0px rgba(0, 0, 0, 0.2)'};
   color: ${(props) => props.color || '#505050'};
-  flex: ${(props) => props.display || '0 0 24%'};
+  flex: ${(props) => props.display || '0 0 26%'};
   line-height: ${(props) => props.lineHeight || '1.6'};
-  margin: ${(props) => props.marginX || '30px auto'};
+  margin: ${(props) => props.marginX || '30px 0 0 0'};
   max-width: ${(props) => props.maxWidth || '1170px'};
   padding: ${(props) => props.paddingX || '15px'};
-  width: ${(props) => props.width || '100%'};
+
+  img {
+    @media (min-width: 901px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex: 0 0 100%;
+  }
 `;

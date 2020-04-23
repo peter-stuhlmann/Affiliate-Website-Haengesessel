@@ -112,10 +112,11 @@ export default function ProductTable() {
 
 const StyledTable = styled.div`
   overflow-x: auto;
-  max-width: calc(100vw - 47px);
+  width: 100%;
+  max-width: calc(73vw - 41px);
 
-  @media (min-width: 1170px) {
-    max-width: calc(1140px / 100 * 72);
+  @media (max-width: 900px) {
+    max-width: calc(100vw - 41px);
   }
 
   table {

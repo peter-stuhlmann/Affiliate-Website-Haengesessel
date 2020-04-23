@@ -36,7 +36,12 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 2em;
     }
 
-    
+    hr {
+      width: 100%;
+      border: 0;
+      height: 1px;
+      background: #ccc;
+    }
   }
 
   // scrollbar

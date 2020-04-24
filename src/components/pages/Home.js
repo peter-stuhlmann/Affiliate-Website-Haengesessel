@@ -15,51 +15,49 @@ export default function Home() {
   meta('name', 'description', text.home.meta.description);
 
   return (
-    <Fragment>
-      <Wrapper paddingX="0">
-        <Main>
-          <h1>{text.home.heading}</h1>
-          <h2>{text.home.content[0].heading}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: text.home.content[0].text,
-            }}
-          />
+    <Wrapper>
+      <Main>
+        <h1>{text.home.heading}</h1>
+        <h2>{text.home.content[0].heading}</h2>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: text.home.content[0].text,
+          }}
+        />
 
-          <LinkedImage
-            alt={products[0].alt}
-            caption={products[0].caption}
-            href={products[0].href}
-            source={products[0].source}
-            src={products[0].src}
-            title={products[0].title}
-            width={products[0].width}
-          />
+        <LinkedImage
+          alt={products[0].alt}
+          caption={products[0].caption}
+          href={products[0].href}
+          source={products[0].source}
+          src={products[0].src}
+          title={products[0].title}
+          width={products[0].width}
+        />
 
-          <h2>{text.home.content[1].heading}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: text.home.content[1].text,
-            }}
-          />
+        <h2>{text.home.content[1].heading}</h2>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: text.home.content[1].text,
+          }}
+        />
 
-          <ProductTable />
+        <ProductTable />
 
-          {text.home.content.slice(2).map((text) => (
-            <Fragment>
-              <h2>{text.heading}</h2>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: text.text,
-                }}
-              />
-            </Fragment>
-          ))}
+        {text.home.content.slice(2).map((text) => (
+          <Fragment>
+            <h2>{text.heading}</h2>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: text.text,
+              }}
+            />
+          </Fragment>
+        ))}
 
-          <ShareButtons />
-        </Main>
-        <Sidebar />
-      </Wrapper>
-    </Fragment>
+        <ShareButtons />
+      </Main>
+      <Sidebar />
+    </Wrapper>
   );
 }

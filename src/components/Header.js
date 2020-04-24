@@ -9,7 +9,7 @@ export default function HeaderComponent() {
 
   return (
     <Header>
-      <Wrapper backgroundColor="transparent" marginX="0 auto">
+      <Wrapper backgroundColor="transparent" marginX="0 auto" paddingX="15px">
         <Logo>
           <Link to="/">
             <p className="site-title">{text.siteTitle}</p>

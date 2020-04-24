@@ -48,6 +48,6 @@ const StyledWrapper = styled.div`
   line-height: ${(props) => props.lineHeight || '1.6'};
   margin: ${(props) => props.marginX || '30px auto'};
   max-width: ${(props) => props.maxWidth || '1170px'};
-  padding: ${(props) => props.paddingX || '15px'};
+  padding: ${(props) => props.paddingX || '0'};
   width: ${(props) => props.width || '100%'};
 `;

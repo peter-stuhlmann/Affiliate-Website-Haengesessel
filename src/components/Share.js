@@ -77,6 +77,7 @@ const StyledShare = styled.aside`
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
     line-height: 23px;
     padding: 1px 8px;
+    margin-bottom: 5px;
     margin-right: 6px;
     transition: 0.2s ease all;
 

@@ -106,6 +106,7 @@ const StyledFooter = styled.footer`
 
           @media (max-width: 1170px) {
             display: block;
+            margin-bottom: 5px;
             margin-left: 0;
           }
 

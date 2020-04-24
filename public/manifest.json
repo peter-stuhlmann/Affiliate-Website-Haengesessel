@@ -1,0 +1,20 @@
+{
+  "short_name": "Hängesessel",
+  "name": "Hängesessel mit Gestell",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#9c4808",
+  "background_color": "#ffffff"
+}

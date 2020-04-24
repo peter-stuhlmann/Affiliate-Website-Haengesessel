@@ -7,12 +7,14 @@ import FooterComponent from './Footer';
 import ContextProvider from '../Context';
 import Router from './Router';
 import ScrollToTop from './ScrollToTop';
+import CookieConsentBanner from './CookieConsent';
 
 export default function App() {
   return (
     <ContextProvider>
       <BrowserRouter>
         <GlobalStyles />
+        <CookieConsentBanner />
         <ScrollToTop />
         <HeaderComponent />
         <MainNavigation />

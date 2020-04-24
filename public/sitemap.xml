@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Last modified by Peter R. Stuhlmann at 2020-03-05 -->
+<!-- Last modified by Peter R. Stuhlmann at 2020-04-24 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url> 
         <loc>https://haengesessel-gestell.de/</loc>
-        <lastmod>2020-03-05</lastmod>
+        <lastmod>2020-04-24</lastmod>
     </url>
     <url>
         <loc>https://haengesessel-gestell.de/haengesessel/</loc>
-        <lastmod>2020-03-05</lastmod>
+        <lastmod>2020-04-24</lastmod>
     </url>
     <url>
         <loc>https://haengesessel-gestell.de/kaufberatung/</loc>
-        <lastmod>2020-03-05</lastmod>
+        <lastmod>2020-04-24</lastmod>
     </url>
     <url>
         <loc>https://haengesessel-gestell.de/kontakt/</loc>
-        <lastmod>2020-03-05</lastmod>
+        <lastmod>2020-04-24</lastmod>
+    </url>
+    <url>
+        <loc>https://haengesessel-gestell.de/zubehoer/</loc>
+        <lastmod>2020-04-24</lastmod>
     </url>
 </urlset>

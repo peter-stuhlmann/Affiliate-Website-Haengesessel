@@ -22,7 +22,11 @@ export default function Sidebar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={paragraph.img.src} alt={paragraph.img.alt} />
+                  <img
+                    src={paragraph.img.src}
+                    alt={paragraph.img.alt}
+                    loading="lazy"
+                  />
                 </a>
               ) : null}
               {paragraph.rating ? (

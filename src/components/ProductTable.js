@@ -31,7 +31,11 @@ export default function ProductTable() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={product.img.src} alt={product.img.alt} />
+                    <img
+                      src={product.img.src}
+                      alt={product.img.alt}
+                      loading="lazy"
+                    />
                   </a>
                 </td>
               ))}

@@ -43,7 +43,9 @@ export default function ProductTable() {
                   <td key={product.link.href} className="special">
                     {product.special}
                   </td>
-                ) : null
+                ) : (
+                  <td></td>
+                )
               )}
             </tr>
             <tr>
@@ -62,6 +64,12 @@ export default function ProductTable() {
               <td>{text.home.table.criteria.dimensions}</td>
               {text.home.table.products.map((product) => (
                 <td key={product.link.href}>{product.dimensions}</td>
+              ))}
+            </tr>
+            <tr>
+              <td>{text.home.table.criteria.material}</td>
+              {text.home.table.products.map((product) => (
+                <td key={product.link.href}>{product.material}</td>
               ))}
             </tr>
             <tr>
@@ -144,12 +152,25 @@ const StyledTable = styled.div`
     }
 
     tr {
+      &:first-child {
+        text-align: center;
+
+        img {
+          max-width: 100%;
+          max-height: 200px;
+        }
+      }
+
       &:nth-child(even) {
         background-color: #9c480812;
       }
 
       &:nth-child(2) {
         background-color: #fff;
+      }
+
+      &:last-child {
+        background-color: transparent;
       }
     }
 

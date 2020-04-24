@@ -39,8 +39,4 @@ const StyledMain = styled.main`
     line-height: ${(props) => props.lineHeight || '1.6'};
     text-align: ${(props) => props.textAlign || 'justify'};
   }
-
-  img {
-    width: 100%;
-  }
 `;

@@ -17,10 +17,6 @@ export const GlobalStyles = createGlobalStyle`
     font-display: block;
   }
 
-  * {
-    box-sizing: border-box;
-  }
-
   body {
     margin: 0;
     font-family: 'Lora', serif;
@@ -46,6 +42,7 @@ export const GlobalStyles = createGlobalStyle`
   // scrollbar
   ::-webkit-scrollbar {
     width: 11px;
+    height: 11px;
   }
   ::-webkit-scrollbar-track {
     background-color: #dcdcdc;

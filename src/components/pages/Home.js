@@ -45,12 +45,17 @@ export default function Home() {
 
           <ProductTable />
 
-          <h2>{text.home.content[2].heading}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: text.home.content[2].text,
-            }}
-          />
+          {text.home.content.slice(2).map((text) => (
+            <Fragment>
+              <h2>{text.heading}</h2>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: text.text,
+                }}
+              />
+            </Fragment>
+          ))}
+
           <ShareButtons />
         </Main>
         <Sidebar />

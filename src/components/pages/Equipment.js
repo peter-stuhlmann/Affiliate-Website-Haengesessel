@@ -17,7 +17,6 @@ export default function Equipment() {
     <Wrapper>
       <Main>
         <h1>{text.equipment.heading}</h1>
-        <p>{document.title}</p>
         <ul>
           {text.equipment.content.map((item) => (
             <li key={item}>{item}</li>

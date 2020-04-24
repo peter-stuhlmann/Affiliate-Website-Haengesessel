@@ -45,7 +45,7 @@ export default function Home() {
         <ProductTable />
 
         {text.home.content.slice(2).map((text) => (
-          <Fragment>
+          <Fragment key={text.heading}>
             <h2>{text.heading}</h2>
             <div
               dangerouslySetInnerHTML={{

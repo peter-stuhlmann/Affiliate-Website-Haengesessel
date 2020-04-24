@@ -48,7 +48,7 @@ export default function ProductTable() {
                     {product.special}
                   </td>
                 ) : (
-                  <td></td>
+                  <td key={product.link.href}></td>
                 )
               )}
             </tr>
